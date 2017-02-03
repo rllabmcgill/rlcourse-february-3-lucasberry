@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+# 3x3 Grid World with '1' being a Terminal state
 states = {'1','2','3',
           '4','5','6',
           '7','8','9'}
@@ -11,12 +12,16 @@ reward = { '1':0,'2':-1,'3':-1,
           '4':-1,'5':-1,'6':-1,
           '7':-1,'8':-1,'9':-1}
 
+# target policy no recognizer
 tar_norecog={'N':0.55,'E':0,'S':0,'W':0.45}
 
+# target policy with recognizer
 tar_recog = {'N':5/7,'E':0,'W':2/7,'S':0}
 
+# behavior policy
 mu_b={'N':0.7,'E':0.01,'S':0.01,'W':0.28}
 
+# recognizer
 c={'N':1,'E':0,'S':0,'W':1}
 
 possible_moves={'8':{'N':'5','E':'9','W':'7','S':'8'},
